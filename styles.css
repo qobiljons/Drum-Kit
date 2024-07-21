@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -16,12 +17,42 @@ body {
   height: 100vh;
 }
 
-.container {
-  max-width: 800px;
-  padding: 20px;
+
+.drum[data-key="87"] {
+  background-image: url('images/crash.png');
+  background-size: cover;
 }
 
-.title {
+.drum[data-key="65"] {
+  background-image: url('images/kick.png');
+  background-size: cover;
+}
+
+.drum[data-key="83"] {
+  background-image: url('images/snare.png');
+  background-size: cover;
+}
+
+.drum[data-key="68"] {
+  background-image: url('images/tom1.png');
+  background-size: cover;
+}
+
+.drum[data-key="74"] {
+  background-image: url('images/tom2.png');
+  background-size: cover;
+}
+
+.drum[data-key="75"] {
+  background-image: url('images/tom3.png');
+  background-size: cover;
+}
+
+.drum[data-key="76"] {
+  background-image: url('images/tom4.png');
+  background-size: cover;
+}
+#title {
   font-size: 4rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -31,19 +62,24 @@ body {
 .set {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
   margin-top: 40px;
 }
 
 .drum {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DA0463;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  background-color: #1E1E1E;
+  border: 5px solid #DA0463;
+  border-radius: 50%;
   width: 120px;
   height: 120px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  border: 5px solid #DA0463;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
 }
 
@@ -53,37 +89,21 @@ body {
   background-color: #333333;
 }
 
-.drum[data-key="87"] {
-  background-image: url('images/crash.png');
-}
-
-.drum[data-key="65"] {
-  background-image: url('images/kick.png');
-}
-
-.drum[data-key="83"] {
-  background-image: url('images/snare.png');
-}
-
-.drum[data-key="68"] {
-  background-image: url('images/tom1.png');
-}
-
-.drum[data-key="74"] {
-  background-image: url('images/tom2.png');
-}
-
-.drum[data-key="75"] {
-  background-image: url('images/tom3.png');
-}
-
-.drum[data-key="76"] {
-  background-image: url('images/tom4.png');
-}
-
 footer {
   margin-top: 20px;
   font-family: sans-serif;
   font-size: 0.8rem;
   color: #888888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .set {
+    flex-direction: column;
+  }
+  .drum {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
 }
