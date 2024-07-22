@@ -40,7 +40,9 @@ function makeSound(key){
 function focusOn(key){
     let keys = ["W", "A", "S", "D", "J", "K", "L"]
     if (keys.includes(key)){
-        return true
+        let drumElement = document.querySelector(`.${key}`)
+        drumElement.focus();
+        removeFocusClass();
     }
 }
 
@@ -52,9 +54,10 @@ function removeFocusClass() {
 
 
 for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('mouseenter', function (){
+    buttons[i].addEventListener('click', function (){
         let innerHTML = this.innerHTML
         makeSound(innerHTML)
+        focusOn(innerHTML)
     })
 }   
 
@@ -62,9 +65,5 @@ for (var i = 0; i < buttons.length; i++) {
 document.addEventListener("keydown", function(event){
     let key = event.key.toLocaleUpperCase()
     makeSound(key)
-    if (focusOn(key)){    
-        let drumElement = document.querySelector(`.${key}`)
-        drumElement.focus();
-        removeFocusClass();
-    }
+    focusOn(key)
 })
