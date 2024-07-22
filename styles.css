@@ -85,8 +85,10 @@ body {
 
 .drum:hover {
   transform: scale(1.1);
+  transition: 0.2s ease-out;
   box-shadow: 0 0 20px rgba(218, 4, 99, 0.8);
   background-color: #333333;
+  color : #fff;
 }
 
 footer {
