@@ -48,3 +48,10 @@ This is a simple drum kit web application where you can play different drum soun
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Live Demo
+
+[Drum Kit](https://qobiljons.github.io/Drum-Kit/)
+
+
+
