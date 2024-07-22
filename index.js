@@ -27,7 +27,7 @@ function makeSound(key){
             kick.play();    
             break
         case "L":
-            let crash = new Audio('sounds/snore.mp3');
+            let crash = new Audio('sounds/snare.mp3');
             crash.play();    
             break
             
@@ -37,7 +37,7 @@ function makeSound(key){
 }
 
 
-function focus(key){
+function focusOn(key){
     let keys = ["W", "A", "S", "D", "J", "K", "L"]
     if (keys.includes(key)){
         return true
@@ -62,7 +62,7 @@ for (var i = 0; i < buttons.length; i++) {
 document.addEventListener("keydown", function(event){
     let key = event.key.toLocaleUpperCase()
     makeSound(key)
-    if (focus(key)){    
+    if (focusOn(key)){    
         let drumElement = document.querySelector(`.${key}`)
         drumElement.focus();
         removeFocusClass();
