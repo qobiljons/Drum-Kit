@@ -7,7 +7,8 @@ This is a simple drum kit web application where you can play different drum soun
 - **Button Click**: Click on the drum buttons with your mouse to play sounds.
 - **Keyboard Press**: Press corresponding keys ('W', 'A', 'S', 'D', 'J', 'K', 'L') on your keyboard to play sounds.
 - **Focus Highlight**: When you click a button or press a key, the corresponding drum button gets focused briefly to indicate the interaction.
-- **Responsive Design**: The application is designed to work on various screen sizes.
+- **Responsive Design**: The application is designed to work on laptops and tablets
+- 
 
 ## Technologies Used
 
